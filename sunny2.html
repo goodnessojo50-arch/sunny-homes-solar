@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Sunny Group | Solar Energy & Real Estate Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#001E3D',
+                            900: '#0A192F',
+                            950: '#030C1A',
+                        },
+                        amber: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        },
+                        emerald: {
+                            500: '#10B981',
+                            600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Prevent horizontal overflow on mobile screens */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .glass-dark {
+            background: rgba(10, 25, 47, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .solar-gradient {
+            background: linear-gradient(135deg, #0A192F 0%, #001E3D 55%, #78350F 100%);
+        }
+        
+        /* Mobile menu smooth slide animation */
+        #mobile-menu {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobile-menu.translate-x-full {
+            transform: translateX(100%);
+        }
+        #mobile-menu.translate-x-0 {
+            transform: translateX(0);
+        }
+
+        /* Fluid Typography Clamp */
+        .hero-title {
+            font-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white pb-16 lg:pb-0">
+
+    <!-- TOP BAR (Hidden on tiny screens to save vertical space) -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800 hidden sm:block">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 flex-wrap justify-center sm:justify-start">
+                <a href="tel:08034569423" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-amber-500"></i> +234 803 456 9423</a>
+                <a href="mailto:sunny87@gmail.com" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-amber-500"></i> sunny87@gmail.com</a>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-clock text-amber-500"></i> Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-emerald-400 font-medium flex items-center gap-1 text-[11px]"><i class="fa-solid fa-shield-halved text-[10px]"></i> Verified Titles & Solar Guarantee</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-navy-900 font-extrabold text-xl sm:text-2xl shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                        <i class="fa-solid fa-sun-plant-wilt text-navy-950"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white flex items-center gap-1">
+                            SUNNY <span class="text-amber-500">GROUP</span>
+                        </span>
+                        <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-400 font-medium">Solar Energy & Properties</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-7 font-medium text-sm">
+                    <a href="#home" class="hover:text-amber-400 transition py-1">Home</a>
+                    <a href="#services" class="hover:text-amber-400 transition py-1">Services</a>
+                    <a href="#solar-packages" class="hover:text-amber-400 transition py-1">Solar Packages</a>
+                    <a href="#calculator" class="hover:text-amber-400 transition py-1">Solar Calculator</a>
+                    <a href="#properties" class="hover:text-amber-400 transition py-1">Properties</a>
+                    <a href="#about" class="hover:text-amber-400 transition py-1">About Us</a>
+                    <a href="#contact" class="hover:text-amber-400 transition py-1">Contact</a>
+                </nav>
+
+                <!-- Desktop Actions -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <button onclick="openModal('solar')" class="bg-amber-500 hover:bg-amber-600 text-navy-950 px-4 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-amber-500/20 flex items-center gap-2 active:scale-95">
+                        <i class="fa-solid fa-bolt"></i> Solar Quote
+                    </button>
+                    <button onclick="openModal('realestate')" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-emerald-600/20 flex items-center gap-2 active:scale-95">
+                        <i class="fa-solid fa-house"></i> Book Tour
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden w-11 h-11 flex items-center justify-center text-slate-200 hover:text-white rounded-xl bg-slate-800/60 border border-slate-700/60 focus:outline-none active:bg-slate-700">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 w-[82%] max-w-sm h-full bg-navy-950 border-l border-slate-800 z-50 p-6 flex flex-col justify-between translate-x-full lg:hidden overflow-y-auto">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-navy-950 font-bold text-lg">
+                        <i class="fa-solid fa-sun-plant-wilt"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-lg">SUNNY <span class="text-amber-500">GROUP</span></span>
+                </div>
+                <button id="close-mobile-menu" aria-label="Close Navigation" class="w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <nav class="py-6 space-y-4 font-medium text-base">
+                <a href="#home" class="mobile-nav-link block text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-house w-6 text-slate-500"></i> Home</a>
+                <a href="#services" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-gears w-6 text-slate-500"></i> Services</a>
+                <a href="#solar-packages" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-solar-panel w-6 text-slate-500"></i> Solar Packages</a>
+                <a href="#calculator" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-calculator w-6 text-slate-500"></i> Load Estimator</a>
+                <a href="#properties" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-building w-6 text-slate-500"></i> Properties For Sale</a>
+                <a href="#about" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2 border-b border-slate-800/60"><i class="fa-solid fa-circle-info w-6 text-slate-500"></i> About Sunny Group</a>
+                <a href="#contact" class="mobile-nav-link block text-slate-200 hover:text-amber-400 py-2"><i class="fa-solid fa-envelope w-6 text-slate-500"></i> Contact Us</a>
+            </nav>
+        </div>
+
+        <div class="space-y-3 pt-6 border-t border-slate-800">
+            <button onclick="openModal('solar'); toggleMobileMenu();" class="w-full bg-amber-500 text-navy-950 py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2 active:scale-95 shadow-md">
+                <i class="fa-solid fa-bolt"></i> Request Solar Quote
+            </button>
+            <button onclick="openModal('realestate'); toggleMobileMenu();" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2 active:scale-95 shadow-md">
+                <i class="fa-solid fa-house"></i> Book Site Viewing
+            </button>
+            <div class="text-center pt-2 text-xs text-slate-400">
+                <a href="tel:08034569423" class="hover:text-amber-400"><i class="fa-solid fa-phone text-amber-500"></i> 08034569423</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-navy-900 text-white py-16 sm:py-24 lg:py-32 overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80" alt="Modern House with Solar Panels" class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-72 sm:w-96 h-72 sm:h-96 bg-amber-500 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-72 sm:w-96 h-72 sm:h-96 bg-emerald-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Text -->
+                <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-navy-800/90 border border-amber-500/30 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-amber-400 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
+                        <i class="fa-solid fa-shield-halved text-amber-400 text-xs"></i> 24/7 Power Systems & Verified Properties
+                    </div>
+
+                    <h1 class="hero-title font-extrabold tracking-tight leading-tight">
+                        Power Your Life With <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Solar Energy</span> & Own Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Dream Property</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Sunny Group delivers uninterrupted lithium solar setups and connects buyers to verified luxury duplexes, apartments, and land plots with guaranteed legal titles.
+                    </p>
+
+                    <!-- Dual Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 pt-2">
+                        <a href="#solar-packages" class="bg-amber-500 hover:bg-amber-600 text-navy-950 font-extrabold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-amber-500/20 transition-all transform active:scale-95 flex items-center justify-center gap-3 text-sm sm:text-base">
+                            <i class="fa-solid fa-solar-panel text-lg"></i> Explore Solar Packages
+                        </a>
+                        <a href="#properties" class="bg-slate-800/90 hover:bg-slate-800 text-white border border-slate-700 font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all hover:border-emerald-400 flex items-center justify-center gap-3 text-sm sm:text-base active:scale-95">
+                            <i class="fa-solid fa-building text-emerald-400 text-lg"></i> View Properties For Sale
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-6 sm:pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-2 sm:gap-4 text-center lg:text-left">
+                        <div class="bg-navy-950/40 p-2 sm:p-0 rounded-lg">
+                            <p class="text-xl sm:text-3xl font-extrabold text-amber-400">500+</p>
+                            <p class="text-[11px] sm:text-sm text-slate-400">Solar Installations</p>
+                        </div>
+                        <div class="bg-navy-950/40 p-2 sm:p-0 rounded-lg">
+                            <p class="text-xl sm:text-3xl font-extrabold text-emerald-400">120+</p>
+                            <p class="text-[11px] sm:text-sm text-slate-400">Homes & Lands Sold</p>
+                        </div>
+                        <div class="bg-navy-950/40 p-2 sm:p-0 rounded-lg">
+                            <p class="text-xl sm:text-3xl font-extrabold text-white">100%</p>
+                            <p class="text-[11px] sm:text-sm text-slate-400">Verified C of O Titles</p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Right Showcase Cards -->
+                <div class="lg:col-span-5 grid gap-4 sm:gap-6 mt-4 lg:mt-0">
+                    <!-- Solar Showcase Card -->
+                    <div class="glass-dark p-5 sm:p-6 rounded-2xl relative overflow-hidden border-l-4 border-l-amber-500 shadow-2xl">
+                        <div class="relative z-10 flex items-start justify-between">
+                            <div>
+                                <span class="bg-amber-500/20 text-amber-300 text-[10px] sm:text-xs px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">Zero Generator Bills</span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white mt-2">Custom Solar Systems</h3>
+                                <p class="text-slate-300 text-xs sm:text-sm mt-1">Tier-1 panels, Hybrid Inverters & Lithium Batteries.</p>
+                            </div>
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 text-xl sm:text-2xl shrink-0">
+                                <i class="fa-solid fa-charging-station"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 rounded-xl overflow-hidden h-32 sm:h-36 relative">
+                            <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x400/0A192F/F59E0B?text=Solar+System+Setup';" alt="Solar Inverter setup" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-3">
+                                <button onclick="openModal('solar')" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1.5 min-h-[36px]">
+                                    Request Free Energy Audit <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real Estate Showcase Card -->
+                    <div class="glass-dark p-5 sm:p-6 rounded-2xl relative overflow-hidden border-l-4 border-l-emerald-500 shadow-2xl">
+                        <div class="relative z-10 flex items-start justify-between">
+                            <div>
+                                <span class="bg-emerald-500/20 text-emerald-300 text-[10px] sm:text-xs px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">Verified Real Estate</span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white mt-2">Prime Homes & Lands</h3>
+                                <p class="text-slate-300 text-xs sm:text-sm mt-1">Duplexes, Serviced Apartments & Land Plots with C of O.</p>
+                            </div>
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 text-xl sm:text-2xl shrink-0">
+                                <i class="fa-solid fa-house-circle-check"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4 rounded-xl overflow-hidden h-32 sm:h-36 relative">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x400/0A192F/10B981?text=Luxury+Real+Estate';" alt="Luxury Real Estate House" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent flex items-end p-3">
+                                <button onclick="openModal('realestate')" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 min-h-[36px]">
+                                    Schedule Physical Tour <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE DIVISIONS -->
+    <section id="services" class="py-16 sm:py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-amber-600 mb-2">Our Core Services</h2>
+                <p class="text-2xl sm:text-4xl font-extrabold text-navy-950">Two Dedicated Business Wings</p>
+                <p class="text-slate-600 mt-3 sm:mt-4 text-sm sm:text-base">Whether you want clean off-grid solar energy or are searching for verified properties, Sunny Group is your single trusted partner.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-10">
+                <!-- Solar Wing Card -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-200/80 hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600 text-2xl sm:text-3xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-navy-950 mb-3">Solar Energy Engineering</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                            Full solar system design, rooftop installation, LiFePO4 battery banks, smart inverter setups, and quarterly servicing for residential & commercial properties.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-500 shrink-0"></i> Residential Solar Systems (3.5kVA - 10kVA)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-500 shrink-0"></i> Commercial High-Capacity Solar Microgrids</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-500 shrink-0"></i> Inverter Maintenance & Battery Diagnostics</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-500 shrink-0"></i> Solar Water Borehole Pumps & Streetlights</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('solar')" class="w-full py-3.5 sm:py-4 bg-navy-900 hover:bg-navy-800 text-amber-400 font-bold rounded-xl transition text-sm flex items-center justify-center gap-2 active:scale-95">
+                        Request Solar Inverter Quote <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Real Estate Wing Card -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-200/80 hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-2xl sm:text-3xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-building-circle-check"></i>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-navy-950 mb-3">Real Estate & Property Sales</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                            Verified residential homes, luxury duplexes, commercial land, and serviced plots with clean documentation (Governor's Consent, C of O, Gazette).
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i> Luxury Fully Detached & Semi-Detached Duplexes</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i> Verified Commercial & Residential Land Plots</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i> Off-Plan Property Development Investments</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i> Property Advisory & Legal Title Verification</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('realestate')" class="w-full py-3.5 sm:py-4 bg-navy-900 hover:bg-navy-800 text-emerald-400 font-bold rounded-xl transition text-sm flex items-center justify-center gap-2 active:scale-95">
+                        Book Physical Property Tour <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLAR PACKAGES SECTION -->
+    <section id="solar-packages" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-amber-600 mb-2">Pre-Configured Solar Packages</h2>
+                <p class="text-2xl sm:text-4xl font-extrabold text-navy-950">Solar System Installation Offers</p>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Choose a pre-tested system or consult with our electrical engineers for a custom load capacity setup.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- 3.5kVA Package -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-lg flex flex-col justify-between hover:border-amber-400 transition">
+                    <div>
+                        <div class="h-44 sm:h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0A192F/F59E0B?text=3.5kVA+Solar+Setup';" alt="3.5kVA Solar Inverter Setup" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-navy-950 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">Small Home Setup</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <h3 class="text-xl sm:text-2xl font-extrabold text-navy-950 mb-1">3.5 kVA Solar Package</h3>
+                            <p class="text-2xl sm:text-3xl font-black text-amber-600 mb-6">₦ 2,850,000 <span class="text-xs text-slate-500 font-normal">/ Installed</span></p>
+                            
+                            <div class="space-y-3 border-t border-slate-200 pt-4 text-xs sm:text-sm text-slate-700">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-microchip text-amber-500"></i> 3.5kVA Pure Sine Inverter</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-car-battery text-amber-500"></i> 5kWh Lithium-ion Battery</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-solar-panel text-amber-500"></i> 4 x 550W Tier-1 Panels</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-lightbulb text-amber-500"></i> Powers TV, Fridge, Fans & Lights</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('solar', '3.5 kVA Package (₦2.85M)')" class="w-full bg-navy-900 hover:bg-amber-500 hover:text-navy-950 text-white font-bold py-3.5 rounded-xl transition text-sm min-h-[48px]">
+                            Order 3.5kVA System
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5kVA Package -->
+                <div class="bg-navy-900 text-white rounded-2xl overflow-hidden border-2 border-amber-500 shadow-2xl flex flex-col justify-between relative">
+                    <div class="absolute top-3 right-3 z-10 bg-amber-500 text-navy-950 text-[10px] sm:text-xs font-extrabold px-2.5 py-1 rounded-full uppercase shadow">
+                        Best Value
+                    </div>
+                    <div>
+                        <div class="h-44 sm:h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0A192F/F59E0B?text=5.0kVA+Smart+Solar';" alt="5kVA Solar Rooftop Panels" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-1">5.0 kVA Smart Package</h3>
+                            <p class="text-2xl sm:text-3xl font-black text-amber-400 mb-6">₦ 4,950,000 <span class="text-xs text-slate-400 font-normal">/ Installed</span></p>
+                            
+                            <div class="space-y-3 border-t border-slate-800 pt-4 text-xs sm:text-sm text-slate-300">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-microchip text-amber-400"></i> 5kVA Smart Hybrid Inverter</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-car-battery text-amber-400"></i> 10kWh Lithium Battery Storage</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-solar-panel text-amber-400"></i> 8 x 550W Solar Panels</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-amber-400"></i> Powers 1.5HP AC, Fridge, Freezer & All Lights</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('solar', '5.0 kVA Smart Package (₦4.95M)')" class="w-full bg-amber-500 hover:bg-amber-600 text-navy-950 font-extrabold py-3.5 rounded-xl transition text-sm shadow-lg min-h-[48px]">
+                            Order 5.0kVA System
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 10kVA Package -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-lg flex flex-col justify-between hover:border-amber-400 transition sm:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="h-44 sm:h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x450/0A192F/F59E0B?text=10.0kVA+Heavy+Duty';" alt="10kVA Commercial Solar Inverter System" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">Mansion / Office</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <h3 class="text-xl sm:text-2xl font-extrabold text-navy-950 mb-1">10.0 kVA Heavy Package</h3>
+                            <p class="text-2xl sm:text-3xl font-black text-amber-600 mb-6">₦ 8,700,000 <span class="text-xs text-slate-500 font-normal">/ Installed</span></p>
+                            
+                            <div class="space-y-3 border-t border-slate-200 pt-4 text-xs sm:text-sm text-slate-700">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-microchip text-amber-500"></i> 10kVA Commercial Inverter</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-car-battery text-amber-500"></i> 15kWh Wall Lithium Bank</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-solar-panel text-amber-500"></i> 14 x 550W Monocrystalline Panels</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-plug text-amber-500"></i> Multiple ACs, Pumping Machine & Load</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('solar', '10.0 kVA Heavy Package (₦8.7M)')" class="w-full bg-navy-900 hover:bg-amber-500 hover:text-navy-950 text-white font-bold py-3.5 rounded-xl transition text-sm min-h-[48px]">
+                            Order 10kVA System
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SOLAR CALCULATOR -->
+    <section id="calculator" class="py-16 sm:py-24 solar-gradient text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-4 sm:space-y-6 text-center lg:text-left">
+                    <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block">Interactive Tool</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold leading-tight">Solar Capacity & Load Estimator</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Tap on the appliances you plan to run on solar power to instantly calculate your minimum inverter system size and price recommendation.
+                    </p>
+                    
+                    <div class="space-y-3 pt-2 text-left hidden sm:block">
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-calculator text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs sm:text-sm">Prevent Inverter Overloading</h4>
+                                <p class="text-[11px] sm:text-xs text-slate-400">Protects your lithium batteries and prolongs lifespan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-piggy-bank text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs sm:text-sm">Cut Fuel Costs</h4>
+                                <p class="text-[11px] sm:text-xs text-slate-400">Eliminate monthly generator fuel expenses completely.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Container -->
+                <div class="lg:col-span-7 bg-navy-950/90 border border-slate-700/80 p-5 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+                    <h3 class="text-base sm:text-xl font-bold text-white mb-4 border-b border-slate-800 pb-3">Tap Appliances You Use:</h3>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4 mb-6">
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="200" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-lightbulb text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">LED Lights (10)</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">200 Watts</span>
+                        </label>
+
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="300" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-fan text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">Standing Fans (3)</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">300 Watts</span>
+                        </label>
+
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="250" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-tv text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">TV & Sound System</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">250 Watts</span>
+                        </label>
+
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="500" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-box text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">Double Door Fridge</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">500 Watts</span>
+                        </label>
+
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="1200" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-snowflake text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">1.5HP Inverter AC</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">1200 Watts</span>
+                        </label>
+
+                        <label class="cursor-pointer bg-navy-900 border border-slate-800 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center gap-1.5 hover:border-amber-500 transition has-[:checked]:border-amber-500 has-[:checked]:bg-amber-500/15">
+                            <input type="checkbox" value="1500" class="appliance-check hidden" onchange="calculateSolar()">
+                            <i class="fa-solid fa-water text-amber-400 text-xl sm:text-2xl"></i>
+                            <span class="text-[11px] sm:text-xs font-semibold text-slate-300 text-center">Water Pumping Machine</span>
+                            <span class="text-[9px] sm:text-[10px] text-slate-500">1500 Watts</span>
+                        </label>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div class="bg-navy-900 p-4 sm:p-6 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div class="text-center sm:text-left w-full sm:w-auto">
+                            <p class="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase">Total Estimated Load:</p>
+                            <p id="calc-total-watts" class="text-2xl sm:text-3xl font-black text-amber-400">0 Watts</p>
+                            <p id="calc-recommended" class="text-xs text-emerald-400 font-medium mt-1">Tap items above for system match</p>
+                        </div>
+                        <button onclick="requestCalculatedQuote()" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-navy-950 font-extrabold px-6 py-3.5 rounded-xl transition shrink-0 active:scale-95 text-sm">
+                            Claim Calculated Quote
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTIES CATALOG SECTION -->
+    <section id="properties" class="py-16 sm:py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+                <div>
+                    <h2 class="text-xs uppercase font-bold tracking-widest text-emerald-600 mb-1 sm:mb-2">Verified Real Estate</h2>
+                    <p class="text-2xl sm:text-4xl font-extrabold text-navy-950">Featured Properties For Sale</p>
+                </div>
+                <!-- Property Filters -->
+                <div class="flex flex-wrap gap-1.5 sm:gap-2 p-1.5 bg-white rounded-2xl border border-slate-200">
+                    <button onclick="filterProperties('all')" class="prop-filter-btn active px-3 sm:px-4 py-2 rounded-xl font-bold text-xs transition bg-navy-900 text-white">All Properties</button>
+                    <button onclick="filterProperties('house')" class="prop-filter-btn px-3 sm:px-4 py-2 rounded-xl font-bold text-xs transition text-slate-600 hover:text-navy-950">Houses</button>
+                    <button onclick="filterProperties('land')" class="prop-filter-btn px-3 sm:px-4 py-2 rounded-xl font-bold text-xs transition text-slate-600 hover:text-navy-950">Land Plots</button>
+                    <button onclick="filterProperties('commercial')" class="prop-filter-btn px-3 sm:px-4 py-2 rounded-xl font-bold text-xs transition text-slate-600 hover:text-navy-950">Commercial</button>
+                </div>
+            </div>
+
+            <!-- Property Catalog Grid -->
+            <div id="property-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Property Card 1 -->
+                <div class="prop-card house bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-52 sm:h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x500/0A192F/10B981?text=4+Bedroom+Duplex';" alt="Luxury 4 Bedroom Semi-Detached Duplex" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow">C of O Title</span>
+                            <span class="absolute top-3 right-3 bg-navy-950/80 backdrop-blur-md text-amber-400 text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full">Solar Powered</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <p class="text-xs text-slate-500 font-semibold mb-1"><i class="fa-solid fa-location-dot text-emerald-500"></i> Lekki Phase 1, Lagos</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-navy-950 mb-2">4 Bedroom Fully Detached Duplex</h3>
+                            <p class="text-xl sm:text-2xl font-black text-emerald-600 mb-4">₦ 185,000,000</p>
+                            
+                            <div class="flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                                <span><i class="fa-solid fa-bed text-emerald-500"></i> 4 Beds</span>
+                                <span><i class="fa-solid fa-bath text-emerald-500"></i> 5 Baths</span>
+                                <span><i class="fa-solid fa-car text-emerald-500"></i> 3 Cars</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('realestate', '4 Bedroom Duplex - Lekki Phase 1')" class="w-full bg-navy-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2 min-h-[48px]">
+                            <i class="fa-solid fa-calendar-check"></i> Book Physical Viewing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="prop-card house bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-52 sm:h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x500/0A192F/10B981?text=3+Bedroom+Terrace';" alt="Modern 3 Bedroom Terrace" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow">Governor's Consent</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <p class="text-xs text-slate-500 font-semibold mb-1"><i class="fa-solid fa-location-dot text-emerald-500"></i> Ikate, Lekki</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-navy-950 mb-2">3 Bedroom Modern Smart Terrace</h3>
+                            <p class="text-xl sm:text-2xl font-black text-emerald-600 mb-4">₦ 120,000,000</p>
+                            
+                            <div class="flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                                <span><i class="fa-solid fa-bed text-emerald-500"></i> 3 Beds</span>
+                                <span><i class="fa-solid fa-bath text-emerald-500"></i> 4 Baths</span>
+                                <span><i class="fa-solid fa-solar-panel text-amber-500"></i> Solar Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('realestate', '3 Bedroom Smart Terrace - Ikate')" class="w-full bg-navy-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2 min-h-[48px]">
+                            <i class="fa-solid fa-calendar-check"></i> Book Physical Viewing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="prop-card land bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-52 sm:h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x500/0A192F/10B981?text=600sqm+Land+Plot';" alt="Dry Land Plot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow">Gazette Title</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <p class="text-xs text-slate-500 font-semibold mb-1"><i class="fa-solid fa-location-dot text-emerald-500"></i> Epe Corridor, Lagos</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-navy-950 mb-2">600sqm Dry Residential Plot</h3>
+                            <p class="text-xl sm:text-2xl font-black text-emerald-600 mb-4">₦ 25,000,000 <span class="text-xs text-slate-500 font-normal">/ Plot</span></p>
+                            
+                            <div class="flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                                <span><i class="fa-solid fa-vector-square text-emerald-500"></i> 600 SQM</span>
+                                <span><i class="fa-solid fa-road text-emerald-500"></i> Paved Access</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('realestate', '600sqm Land Plot - Epe')" class="w-full bg-navy-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2 min-h-[48px]">
+                            <i class="fa-solid fa-calendar-check"></i> Book Site Inspection
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="prop-card commercial bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-2xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="h-52 sm:h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x500/0A192F/10B981?text=Commercial+Office+Plaza';" alt="Commercial Office Building" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow">C of O Title</span>
+                        </div>
+                        <div class="p-5 sm:p-6">
+                            <p class="text-xs text-slate-500 font-semibold mb-1"><i class="fa-solid fa-location-dot text-emerald-500"></i> Victoria Island, Lagos</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-navy-950 mb-2">Prime Commercial Retail Office Plaza</h3>
+                            <p class="text-xl sm:text-2xl font-black text-emerald-600 mb-4">₦ 450,000,000</p>
+                            
+                            <div class="flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-4">
+                                <span><i class="fa-solid fa-building text-emerald-500"></i> 4 Floors</span>
+                                <span><i class="fa-solid fa-parking text-emerald-500"></i> 20+ Parking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 pt-0">
+                        <button onclick="openModal('realestate', 'Commercial Office Plaza - Victoria Island')" class="w-full bg-navy-900 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition text-sm flex items-center justify-center gap-2 min-h-[48px]">
+                            <i class="fa-solid fa-calendar-check"></i> Book Commercial Tour
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SUNNY GROUP SECTION -->
+    <section id="about" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Image Grid -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="rounded-2xl overflow-hidden h-48 sm:h-64 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0A192F/F59E0B?text=Solar+Installation';" alt="Solar Engineer Installing Panels" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-48 sm:h-64 shadow-lg translate-y-4 sm:translate-y-6">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0A192F/10B981?text=Real+Estate+Deals';" alt="Real Estate Handshake Deal" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+
+                <!-- Right About Content -->
+                <div class="lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left mt-4 lg:mt-0">
+                    <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block">About Sunny Group</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-950 leading-tight">Reliable Solar Power Meets Genuine Real Estate</h2>
+                    <p class="text-slate-600 text-xs sm:text-base leading-relaxed">
+                        Sunny Group was established with a single vision: to solve energy deficit challenges while delivering verified, risk-free land and housing assets to individuals and organizations.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-3 sm:gap-4 pt-2 text-left">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <i class="fa-solid fa-solar-panel text-amber-500 text-xl sm:text-2xl mb-2"></i>
+                            <h4 class="font-bold text-navy-950 text-xs sm:text-sm">Certified Solar Engineers</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-1">Installed strictly following international electrical safety standards.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                            <i class="fa-solid fa-file-contract text-emerald-500 text-xl sm:text-2xl mb-2"></i>
+                            <h4 class="font-bold text-navy-950 text-xs sm:text-sm">Clean Title Deeds</h4>
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-1">Every property undergoes thorough land registry title authentication.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-emerald-600 mb-2">Client Testimonials</h2>
+                <p class="text-2xl sm:text-3xl font-extrabold text-navy-950">Trusted by Hundreds of Clients</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="flex text-amber-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6">"Sunny Group installed a 5kVA solar inverter system for my family last year. Zero generator noise, and my electricity bill dropped significantly!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-navy-900 text-amber-400 font-bold flex items-center justify-center text-xs">CO</div>
+                        <div>
+                            <h4 class="font-bold text-navy-950 text-xs sm:text-sm">Chief O. Adebayo</h4>
+                            <p class="text-[11px] text-slate-500">Home Owner, Lekki</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="flex text-amber-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6">"Buying our duplex through Sunny Real Estate was completely smooth. All land documents were verified by our lawyers without issue."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">EN</div>
+                        <div>
+                            <h4 class="font-bold text-navy-950 text-xs sm:text-sm">Dr. & Mrs. Nwachukwu</h4>
+                            <p class="text-[11px] text-slate-500">Property Investors</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="flex text-amber-400 text-xs mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6">"We powered our entire office complex with Sunny Group's 10kVA Commercial solar setup. Extremely clean cabling and top service."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-navy-900 text-emerald-400 font-bold flex items-center justify-center text-xs">KT</div>
+                        <div>
+                            <h4 class="font-bold text-navy-950 text-xs sm:text-sm">Kalu T.</h4>
+                            <p class="text-[11px] text-slate-500">MD, TechHub Logistics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <footer id="contact" class="bg-navy-950 text-slate-300 pt-16 sm:pt-20 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-8 sm:gap-12 pb-12 sm:pb-16 border-b border-slate-800">
+                <!-- Brand Info -->
+                <div class="lg:col-span-5 space-y-5 text-center sm:text-left">
+                    <a href="#" class="flex items-center justify-center sm:justify-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-navy-900 font-extrabold text-xl">
+                            <i class="fa-solid fa-sun-plant-wilt"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold tracking-tight text-white">
+                            SUNNY <span class="text-amber-500">GROUP</span>
+                        </span>
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-md mx-auto sm:mx-0">
+                        Sunny Group is your premier partner for sustainable solar power setups and verified real estate properties.
+                    </p>
+                    <div class="space-y-3 text-xs sm:text-sm inline-block text-left">
+                        <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-amber-500 w-5 text-center"></i> Suite 402, Apex Plaza, Victoria Island, Lagos</p>
+                        <p class="flex items-center gap-3"><a href="tel:08034569423" class="hover:text-amber-400 flex items-center gap-3"><i class="fa-solid fa-phone text-amber-500 w-5 text-center"></i> 08034569423 (+234 803 456 9423)</a></p>
+                        <p class="flex items-center gap-3"><a href="mailto:sunny87@gmail.com" class="hover:text-amber-400 flex items-center gap-3"><i class="fa-solid fa-envelope text-amber-500 w-5 text-center"></i> sunny87@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Inquiry Form -->
+                <div class="lg:col-span-7 bg-navy-900 p-6 sm:p-8 rounded-3xl border border-slate-800">
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1">Send Direct Inquiry</h3>
+                    <p class="text-xs text-slate-400 mb-6">Leave your details below for solar quotes or property inspection schedules.</p>
+                    
+                    <form action="https://formsubmit.co/sunny87@gmail.com" method="POST" class="space-y-4">
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New Sunny Group Website Inquiry">
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input type="text" name="Full Name" required placeholder="Your Full Name" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                            <input type="tel" name="Phone Number" required placeholder="Phone / WhatsApp Number" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input type="email" name="Email" required placeholder="Email Address" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                            <select name="Service Requested" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                                <option value="Solar Installation Quote">Solar Installation Quote</option>
+                                <option value="House / Land Purchase">House / Land Purchase</option>
+                                <option value="General Inspection">Book Site Inspection</option>
+                            </select>
+                        </div>
+                        <textarea name="Message" rows="3" placeholder="Tell us about your requirements..." class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full"></textarea>
+                        
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-navy-950 font-bold py-3.5 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-sm active:scale-95">
+                            <i class="fa-solid fa-paper-plane"></i> Send Inquiry Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4 text-center sm:text-left">
+                <p>&copy; 2026 Sunny Group (Sunny Energy & Real Estate Services). All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-amber-400 transition">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- DESKTOP FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/2348034569423?text=Hello%20Sunny%20Group,%20I%20want%20to%20enquire%20about%20your%20Solar%20and%20Real%20Estate%20services." target="_blank" aria-label="Chat on WhatsApp" class="hidden sm:flex fixed bottom-6 right-6 z-40 bg-emerald-500 text-white w-14 h-14 rounded-full items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform active:scale-95">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- MOBILE STICKY QUICK ACTION BAR (Visible only on small screens) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-navy-950 border-t border-slate-800 p-2 sm:hidden grid grid-cols-3 gap-1 shadow-2xl">
+        <a href="tel:08034569423" class="bg-slate-800 text-slate-200 py-2 rounded-lg flex flex-col items-center justify-center text-[10px] font-semibold active:bg-slate-700">
+            <i class="fa-solid fa-phone text-amber-500 text-sm mb-0.5"></i> Call Now
+        </a>
+        <a href="https://wa.me/2348034569423?text=Hello%20Sunny%20Group,%20I%20want%20to%20enquire%20about%20your%20Solar%20and%20Real%20Estate%20services." target="_blank" class="bg-emerald-600 text-white py-2 rounded-lg flex flex-col items-center justify-center text-[10px] font-bold active:bg-emerald-700">
+            <i class="fa-brands fa-whatsapp text-sm mb-0.5"></i> WhatsApp
+        </a>
+        <button onclick="openModal('solar')" class="bg-amber-500 text-navy-950 py-2 rounded-lg flex flex-col items-center justify-center text-[10px] font-bold active:bg-amber-600">
+            <i class="fa-solid fa-bolt text-sm mb-0.5"></i> Get Quote
+        </button>
+    </div>
+
+    <!-- INQUIRY DYNAMIC MODAL -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-navy-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl my-auto">
+            <button onclick="closeModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-navy-950 text-slate-400 hover:text-white flex items-center justify-center text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <div id="modal-icon-box" class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-3">
+                    <i id="modal-icon" class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 id="modal-title" class="text-xl sm:text-2xl font-extrabold text-white">Get Your Solar Quote</h3>
+                <p id="modal-subtitle" class="text-xs text-slate-400 mt-1">Provide your details to receive an official price breakdown.</p>
+            </div>
+
+            <form action="https://formsubmit.co/sunny87@gmail.com" method="POST" class="space-y-4">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" id="modal-subject" name="_subject" value="New Service Booking">
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Full Name</label>
+                    <input type="text" name="Full Name" required placeholder="Enter full name" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp Number</label>
+                    <input type="tel" name="Phone Number" required placeholder="08034569423" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Email Address</label>
+                    <input type="email" name="Email Address" required placeholder="yourname@gmail.com" class="bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-500 w-full">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Selected Requirement</label>
+                    <input type="text" id="modal-package-input" name="Selected Requirement / System" readonly class="bg-navy-950/70 border border-slate-800 text-amber-400 font-medium rounded-xl px-4 py-3 text-xs sm:text-sm w-full">
+                </div>
+
+                <button type="submit" id="modal-submit-btn" class="w-full bg-amber-500 hover:bg-amber-600 text-navy-950 font-bold py-3.5 rounded-xl transition shadow-lg text-sm active:scale-95">
+                    Submit Request Now
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // MOBILE MENU NAVIGATION LOGIC
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+            if (isOpen) {
+                // Close Menu
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenuOverlay.classList.add('opacity-0');
+                setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+                document.body.style.overflow = '';
+            } else {
+                // Open Menu
+                mobileMenuOverlay.classList.remove('hidden');
+                setTimeout(() => mobileMenuOverlay.classList.remove('opacity-0'), 10);
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('translate-x-full')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // CALCULATOR LOGIC
+        function calculateSolar() {
+            const checkboxes = document.querySelectorAll('.appliance-check');
+            let totalWatts = 0;
+            
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    totalWatts += parseInt(cb.value);
+                }
+            });
+
+            const totalDisplay = document.getElementById('calc-total-watts');
+            const recDisplay = document.getElementById('calc-recommended');
+
+            totalDisplay.innerText = totalWatts + ' Watts';
+
+            if (totalWatts === 0) {
+                recDisplay.innerText = 'Tap items above for system match';
+                recDisplay.className = 'text-xs text-emerald-400 font-medium mt-1';
+            } else if (totalWatts <= 1200) {
+                recDisplay.innerText = 'Recommended: 3.5 kVA Solar Inverter System (Est. ₦2.85M)';
+                recDisplay.className = 'text-xs text-amber-400 font-bold mt-1';
+            } else if (totalWatts <= 2500) {
+                recDisplay.innerText = 'Recommended: 5.0 kVA Smart Hybrid Inverter System (Est. ₦4.95M)';
+                recDisplay.className = 'text-xs text-amber-400 font-bold mt-1';
+            } else {
+                recDisplay.innerText = 'Recommended: 10.0 kVA Heavy Duty Inverter System (Est. ₦8.70M)';
+                recDisplay.className = 'text-xs text-amber-400 font-bold mt-1';
+            }
+        }
+
+        function requestCalculatedQuote() {
+            const wattsText = document.getElementById('calc-total-watts').innerText;
+            const recText = document.getElementById('calc-recommended').innerText;
+            
+            if (wattsText === '0 Watts') {
+                openModal('solar', 'Custom Load Audit');
+            } else {
+                openModal('solar', `Custom Load (${wattsText}) - ${recText}`);
+            }
+        }
+
+        // PROPERTY FILTERING
+        function filterProperties(category) {
+            const cards = document.querySelectorAll('.prop-card');
+            const buttons = document.querySelectorAll('.prop-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy-900', 'text-white');
+                btn.classList.add('text-slate-600');
+            });
+
+            event.target.classList.add('bg-navy-900', 'text-white');
+            event.target.classList.remove('text-slate-600');
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // DYNAMIC MODAL LOGIC
+        function openModal(type, packageDetail = '') {
+            const modal = document.getElementById('inquiry-modal');
+            const iconBox = document.getElementById('modal-icon-box');
+            const icon = document.getElementById('modal-icon');
+            const title = document.getElementById('modal-title');
+            const subtitle = document.getElementById('modal-subtitle');
+            const packageInput = document.getElementById('modal-package-input');
+            const subject = document.getElementById('modal-subject');
+            const submitBtn = document.getElementById('modal-submit-btn');
+
+            if (type === 'solar') {
+                iconBox.className = 'w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-3';
+                icon.className = 'fa-solid fa-bolt';
+                title.innerText = 'Request Solar Quote';
+                subtitle.innerText = 'Get an instant consultation and custom load pricing estimate.';
+                packageInput.value = packageDetail || 'General Solar Inverter Consultation';
+                subject.value = 'New Solar Inverter Lead';
+                submitBtn.className = 'w-full bg-amber-500 hover:bg-amber-600 text-navy-950 font-extrabold py-3.5 rounded-xl transition shadow-lg text-sm active:scale-95';
+            } else {
+                iconBox.className = 'w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-3';
+                icon.className = 'fa-solid fa-house-chimney-user';
+                title.innerText = 'Book Property Viewing';
+                subtitle.innerText = 'Schedule a physical site inspection with our real estate team.';
+                packageInput.value = packageDetail || 'General Property Inspection Inquiry';
+                subject.value = 'New Real Estate Viewing Booking';
+                submitBtn.className = 'w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3.5 rounded-xl transition shadow-lg text-sm active:scale-95';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('inquiry-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking dark backdrop outside card
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('inquiry-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
